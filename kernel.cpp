@@ -22,6 +22,16 @@ float host_fitness_function(float x[])
     return res;
 }
 
+float host_squarederror(float x[])
+{
+	float res=0;
+	for(int i=0;i<NUM_OF_DIMENSIONS - 1 ; i++)
+	{
+		res+=x[i]*x[i];
+	}
+	return res;
+}
+
 // Get random antara low dan high
 float getRandom(float low, float high)
 {
